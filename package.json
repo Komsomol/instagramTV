@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "gulp-ignore": "^2.0.1",
+    "gulp-inject": "^3.0.0",
     "gulp-util": "^3.0.7"
   }
 }
