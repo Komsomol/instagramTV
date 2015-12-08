@@ -1,4 +1,3 @@
-
 var gulp        = require('gulp');
 var maps        = require('gulp-sourcemaps');
 var minifyCss   = require('gulp-minify-css');
@@ -53,7 +52,6 @@ gulp.task('clean', function() {
 
 gulp.task('index', function () {
   var target = gulp.src('./build/index.html');
-  // It's not necessary to read the files (will speed up things), we're only after their paths: 
   var sources = gulp.src(['js/all.min.js'], {read: false});
   return target.pipe(inject(sources))
     .pipe(gulp.dest('./build'));
