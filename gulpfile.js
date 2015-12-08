@@ -48,7 +48,7 @@ gulp.task('watchFiles', function() {
 });
 
 gulp.task('clean', function() {
-  del(['build']);
+  return del(['build']);
 });
 
 gulp.task('index', function () {
@@ -69,6 +69,6 @@ gulp.task("build", ['minifyScripts'], function() {
 
 gulp.task('serve', ['watchFiles']);
 
-gulp.task("default", ["clean"], function() {
-  gulp.start('build');
+gulp.task("default", ["clean", "build"], function(){
+  gulp.start('index');
 });
